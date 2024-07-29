@@ -1,1 +1,6 @@
 # CS295LinkedLists
+
+Structure of a LL: A fixed array that needs O(n) time complexity to insert values versus the idealized O(1) time complexity. Elements can be inserted anywhere, and it’s adaptable/scalable to hold as much data as desired. Crucial components of a linked list are the node and the rear-most null element. The first node is called the head, and it’s used to keep track of the entire list. In effect, rather than simply tracking a value by holding it as an element in an array, it is held in a node object that points to the next node object (and its held value). These node objects are then managed by a LinkedList class that uses Insert, Delete, and Iterate methods over its collection. 
+
+Reflect on what I’ve learned from the video and implementation: Given the way in which nodes are constructed and logically linked, it makes sense that insertion would be considered very costly in terms of processing power. If the head of the node were to be replaced by another node (and moved to the 1st position from the 0th position) it would require the entire linked list array to be updated as well. As of 14:49 in the video, I wonder if it would be equally costly to simply modify the Node node.Data? 
+
