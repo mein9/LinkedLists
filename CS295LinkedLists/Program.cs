@@ -1,21 +1,18 @@
 ﻿// Linked List
 using CS295LinkedLists;
+using System.Diagnostics;
 
-// Construct a new node and assign a value to Data
-Node nodeA = new Node();
-nodeA.Data = 1234213;
+LinkedList linkedList = new LinkedList();
+linkedList.InsertFirst(1);
+linkedList.InsertFirst(2);
+linkedList.InsertFirst(3);
+linkedList.InsertFirst(4);
 
-Node nodeB = new Node();
-nodeB.Data = 99999;
+linkedList.DeleteFirst();
+linkedList.DeleteFirst();
 
-Node nodeC = new Node();
-nodeC.Data = 4312;
+linkedList.InsertLast(546);
+linkedList.InsertLast(4123412);
 
-Node nodeD = new Node();
-nodeD.Data = 1111;
-
-// Link the nodes logically, from A thru D
-// A references B, B references C, C references D
-nodeA.Next = nodeB;
-nodeB.Next = nodeC;
-nodeC.Next = nodeD;
+linkedList.DisplayList();
+ 
