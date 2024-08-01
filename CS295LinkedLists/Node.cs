@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CS295LinkedLists
 {
+    /// <summary>
+    /// The Node contains the data and a pointer to the next node
+    /// </summary>
     public class Node
     {
         public int Data { get; set; }
