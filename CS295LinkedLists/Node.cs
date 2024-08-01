@@ -13,6 +13,10 @@ namespace CS295LinkedLists
     {
         public int Data { get; set; }
         public Node? Next { get; set; }
+        /// <summary>
+        /// This should only be used with Doubly Linked Lists
+        /// </summary>
+        public Node? Previous { get; set; }
 
         public void DisplayNode()
         {

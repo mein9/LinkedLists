@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CS295LinkedLists
 {
-    public class LinkedList
+    public class DoublyLinkedList
     {
         public Node First { get; set; }
         public Node Last { get; set; }
@@ -19,6 +19,7 @@ namespace CS295LinkedLists
             newNode.Data = data;
             // Put the old node into Next
             newNode.Next = First;
+            if (First != null) First.Previous = newNode;
             // Make the first the new node
             First = newNode;
 
@@ -31,6 +32,7 @@ namespace CS295LinkedLists
             Node temp = First;
             // Assign the new head
             First = First.Next;
+            if (First != null) First.Previous = null;
             if (First == null) Last = null;
             return temp;
         }
@@ -52,6 +54,7 @@ namespace CS295LinkedLists
             Node newNode = new Node();
             newNode.Data = data;
             currentLastNode.Next = newNode;
+            newNode.Previous = currentLastNode;
             Last = newNode;
         }
     }
