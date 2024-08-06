@@ -15,4 +15,12 @@ linkedList.InsertLast(546);
 linkedList.InsertLast(4123412);
 
 linkedList.DisplayList();
+
+MyStack stack = new MyStack();
+stack.Push(1);
+stack.Push(2);
+Console.WriteLine("Should return 2: " + stack.Peek());
+stack.Pop();
+Console.WriteLine("Should return 1: " + stack.Peek());
  
+
